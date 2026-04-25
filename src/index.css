@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;900&family=JetBrains+Mono:wght@400;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Outfit", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  
+  --color-digital-cyan: #00f2ff;
+  --color-digital-blue: #0044ff;
+  --color-digital-pink: #ff007a;
+  --color-digital-gold: #ff9d00;
+}
+
+@layer base {
+  html, body, #root {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+  body {
+    background-color: #05070a;
+    color: #e0e0e0;
+  }
+}
+
+.digital-grid {
+  background-image: 
+    linear-gradient(rgba(0, 242, 255, 0.05) 1px, transparent 1px), 
+    linear-gradient(90deg, rgba(0, 242, 255, 0.05) 1px, transparent 1px);
+  background-size: 50px 50px;
+}
+
+.glow-orb {
+  background: radial-gradient(circle, rgba(0, 242, 255, 0.1) 0%, transparent 70%);
+  filter: blur(40px);
+}
+
+.scanline {
+  background: linear-gradient(to bottom, transparent 50%, rgba(0, 0, 0, 0.1) 50%);
+  background-size: 100% 4px;
+}
+
+/* Skewed UI element helper */
+.skew-ui {
+  transform: skewX(-12deg);
+}
+
+
